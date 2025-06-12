@@ -979,7 +979,6 @@ danger-color : #f3545d
     border-top: 1px solid #eee;
     padding: 15px;
     background: #ffffff;
-    position: absolute;
     width: 100%; }
     .footer .container, .footer .container-fluid {
       display: flex;

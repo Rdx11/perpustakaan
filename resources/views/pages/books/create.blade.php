@@ -62,8 +62,8 @@
                                         <input type="email" class="form-control" id="email2" placeholder="Jumlah Eksampler">
                                     </div>
                                     <div class="form-group">
-                                        <label for="email2">Jumlah Eksampler</label>
-                                        <input type="email" class="form-control" id="email2" placeholder="Jumlah Eksampler">
+                                        <label for="email2">ISBN</label>
+                                        <input type="email" class="form-control" id="email2" placeholder="ISBN">
                                     </div>
                                     <div class="form-group">
                                         <label for="email2">Stok</label>
