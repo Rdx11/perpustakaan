@@ -66,7 +66,7 @@
                     <span class="sidebar-mini-icon">
                         <i class="fa fa-ellipsis-h"></i>
                     </span>
-                    <h4 class="text-section">Lanjutan</h4>
+                    <h4 class="text-section">Manajemen</h4>
                 </li>
                 <li class="nav-item">
                     <a data-toggle="collapse" href="#base">
