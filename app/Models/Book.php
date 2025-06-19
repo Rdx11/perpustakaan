@@ -3,9 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\Excludable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Book extends Model
 {
+    use HasFactory, Excludable;
+
     protected $primaryKey = 'book_code';
     public $incrementing = false;
     protected $keyType = 'string';

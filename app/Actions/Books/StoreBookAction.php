@@ -36,7 +36,7 @@ class StoreBookAction
                 'main_subject'       => $data['main_subject'],
                 'additional_subject' => $data['additional_subject'],
                 'synopsis'           => $data['synopsis'],
-                'book_cover'         => $data['book_cover'] ?? 'default_photo',
+                'book_cover'         => $data['book_cover'] ?? asset('img/default-book-cover.png'),
             ]);
 
             DB::commit();

@@ -74,6 +74,28 @@
 	<!-- Atlantis JS -->
 	<script src="{{ asset('js/atlantis.min.js') }}"></script>
 
+    <!-- Toast -->
+    <script>
+        var message = '{{ session('success') }}';
+        function setMessage() {
+            var message = message.replace(/"/g, "'");
+        }
+        @if (Session::has('success'))
+            $.notify({
+                icon: 'flaticon-success',
+                title: 'Success',
+                message: message,
+            },{
+                type: 'success',
+                placement: {
+                    from: "top",
+                    align: "right"
+                },
+                time: 1000,
+            });
+        @endif
+    </script>
+
     <!-- css custon file -->
     @stack('script')
 </body>
