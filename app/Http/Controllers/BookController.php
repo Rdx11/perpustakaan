@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
-use App\ViewModels\Books\BookFormViewModel;
+use App\ViewModels\Books\{BookFormViewModel,BookIndexViewModel};
 use App\Http\Requests\Books\{StoreBookRequest, UpdateBookRequest};
 use App\Actions\Books\{StoreBookAction, UpdateBookAction, DeleteBookAction};
 use Illuminate\Http\RedirectResponse;
@@ -16,8 +16,8 @@ class BookController extends Controller
      */
     public function index(): View
     {
-        $books = Book::latest()->paginate(10);
-        return view('pages.books.index', compact('books'));
+        $viewModel = new BookIndexViewModel();
+        return view('pages.books.index', compact('viewModel'));
     }
 
     /**
@@ -44,7 +44,7 @@ class BookController extends Controller
     public function edit(Book $book): View
     {
         $vm = new BookFormViewModel($book);
-        return view('books.form', compact('vm'));
+        return view('pages.books.form', compact('vm'));
     }
 
     /**

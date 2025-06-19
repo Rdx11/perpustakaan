@@ -136,6 +136,7 @@
                                         <div class="form-group">
                                             <label for="sinopsis">Sinopsis</label>
                                             <textarea class="form-control" name="synopsis" id="synopsis" rows="5">
+                                                {{ old('synopsis', $vm->default()['synopsis']) }}
                                             </textarea>
                                         </div>
                                         <div class="form-group">
@@ -226,14 +227,15 @@
                                         <div class="form-group">
                                             <label for="description">Deskripsi</label>
                                             <textarea class="form-control" name="description" id="description" rows="5">
+                                                {{ old('description', $vm->default()['description']) }}
                                             </textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-action">
-                                <button type="submit" class="btn btn-success">Tambah</button>
-                                <button class="btn btn-danger">Batal</button>
+                                <button type="submit" class="btn btn-success">{{ $vm->title() }}</button>
+                                <a href="{{ route('books.index') }}" class="btn btn-danger">Batal</a>
                             </div>
                         </div>
                     </form>
@@ -241,32 +243,7 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="container-fluid">
-            <nav class="pull-left">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.themekita.com">
-                            ThemeKita
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Help
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Licenses
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="copyright ml-auto">
-                2018, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.themekita.com">ThemeKita</a>
-            </div>
-        </div>
-    </footer>
+    <x-footer/>
     <div class="custom-template">
         <div class="title">Settings</div>
         <div class="custom-content">
